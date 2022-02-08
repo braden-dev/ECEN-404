@@ -1,8 +1,6 @@
 import mysql.connector
 from mysql.connector import Error
 
-#serverDir = "C:\Users\Braden\Desktop\Python Web Server\Server Images"
-
 #insert images into the SQL DB
 def insert_images(pic, num):
     note = "pic" + str(num)
