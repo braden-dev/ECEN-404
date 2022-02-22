@@ -1,0 +1,164 @@
+11:01:10 [App     ] Build date: Feb 16 2022, 11:12:45
+11:01:10 [App     ] CPU: AMD Ryzen 7 3700X 8-Core Processor              (16 cores)
+11:01:10 [App     ] RAM: 31.91GB Physical Memory 128.00TB Virtual Memory
+11:01:10 [App     ] OS: Windows 8 x64
+11:01:10 [App     ] Disk: 43.20GB (930.63GB) space
+11:01:10 [App     ] SSE & AVX compatible CPU & OS detected
+11:01:10 [App     ] Command line: DensifyPointCloud scene.mvs --dense-config-file Densify.ini --resolution-level 1 --number-views 8 -w C:\Users\Braden\Desktop\ECEN 404\OpenMVS\reconstruction_testing\output\output_set06\mvs
+11:01:10 [App     ] MapSMtoCores for SM 8.6 is undefined; default to use 64 cores/SM
+11:01:10 [App     ] CUDA device 0 initialized: NVIDIA GeForce RTX 3080 (compute capability 8.6; memory 10.00GB)
+11:01:10 [App     ] Camera model loaded: platform 0; camera  0; f 0.774x0.774; poses 30
+11:01:10 [App     ] Scene loaded from interface format (1ms):
+	30 images (30 calibrated) with a total of 245.28 MPixels (8.18 MPixels/image)
+	1506 points, 0 vertices, 0 faces
+11:01:10 [App     ] Preparing images for dense reconstruction completed: 30 images (272ms)
+11:01:10 [App     ] error: reference image  24 has no good images in view
+11:01:10 [App     ] error: reference image  27 has no good images in view
+11:01:10 [App     ] error: reference image  21 has no good images in view
+11:01:10 [App     ] error: reference image  23 has no good images in view
+11:01:10 [App     ] error: reference image  16 has no good images in view
+11:01:10 [App     ] error: reference image  20 has no good images in view
+11:01:10 [App     ] error: reference image  17 has no good images in view
+11:01:10 [App     ] error: reference image  18 has no good images in view
+11:01:10 [App     ] Selecting images for dense reconstruction completed: 22 images (2ms)
+11:01:10 [App     ] Reference image   0 paired with 2 views
+11:01:10 [App     ] Reference image   4 paired with 1 views
+11:01:10 [App     ] Depth-map for image   0 estimated using  2 images: 1952x1098 (234ms)
+11:01:11 [App     ] Depth-map for image   4 with image   7 estimated: 1952x1098 (97ms)
+11:01:11 [App     ] Reference image   2 paired with 1 views
+11:01:11 [App     ] Reference image   6 paired with 1 views
+11:01:11 [App     ] Depth-map for image   2 with image   6 estimated: 1952x1098 (97ms)
+11:01:11 [App     ] Depth-map for image   6 with image   9 estimated: 1952x1098 (80ms)
+11:01:11 [App     ] Reference image   8 paired with 0 views
+11:01:11 [App     ] Reference image  10 paired with 0 views
+11:01:11 [App     ] Reference image  12 paired with 0 views
+11:01:11 [App     ] Reference image  14 paired with 1 views
+11:01:11 [App     ] Reference image  13 paired with 1 views
+11:01:11 [App     ] Depth-map for image  14 with image  13 estimated: 1952x1098 (80ms)
+11:01:11 [App     ] Depth-map for image  13 with image  14 estimated: 1952x1098 (76ms)
+11:01:11 [App     ] Reference image  19 paired with 0 views
+11:01:11 [App     ] Reference image   3 paired with 0 views
+11:01:11 [App     ] Reference image  22 paired with 0 views
+11:01:11 [App     ] Reference image   5 paired with 1 views
+11:01:12 [App     ] Depth-map for image   5 with image   7 estimated: 1952x1098 (77ms)
+11:01:12 [App     ] Reference image  26 paired with 1 views
+11:01:12 [App     ] Depth-map for image  26 with image  29 estimated: 1952x1098 (78ms)
+11:01:12 [App     ] Reference image  28 paired with 1 views
+11:01:12 [App     ] Depth-map for image  28 with image  25 estimated: 1952x1098 (75ms)
+11:01:12 [App     ] Reference image  29 paired with 2 views
+11:01:12 [App     ] Reference image  11 paired with 0 views
+11:01:12 [App     ] Reference image  15 paired with 0 views
+11:01:12 [App     ] Reference image  25 paired with 2 views
+11:01:12 [App     ] Depth-map for image  29 estimated using  2 images: 1952x1098 (114ms)
+11:01:12 [App     ] Depth-map for image  25 estimated using  2 images: 1952x1098 (104ms)
+11:01:12 [App     ] Reference image   9 paired with 0 views
+11:01:12 [App     ] Reference image   7 paired with 4 views
+11:01:12 [App     ] Reference image   1 paired with 2 views
+11:01:13 [App     ] Depth-map for image   7 estimated using  4 images: 1952x1098 (159ms)
+11:01:13 [App     ] Depth-map for image   1 estimated using  2 images: 1952x1098 (106ms)
+11:01:13 [App     ] Reference image   0 paired with 2 views
+11:01:13 [App     ] error: opening file 'C:/Users/Braden/Desktop/ECEN 404/OpenMVS/reconstruction_testing/output/output_set06/mvs/depth0003.dmap' for reading depth-data
+11:01:13 [App     ] Reference image   4 paired with 1 views
+11:01:13 [App     ] Depth-map for image   0 estimated using  2 images: 1952x1098 (100ms)
+11:01:13 [App     ] Depth-map for image   4 with image   7 estimated: 1952x1098 (75ms)
+11:01:13 [App     ] Reference image   2 paired with 1 views
+11:01:13 [App     ] Reference image   6 paired with 1 views
+11:01:13 [App     ] error: opening file 'C:/Users/Braden/Desktop/ECEN 404/OpenMVS/reconstruction_testing/output/output_set06/mvs/depth0009.dmap' for reading depth-data
+11:01:13 [App     ] Depth-map for image   2 with image   6 estimated: 1952x1098 (73ms)
+11:01:13 [App     ] Depth-map for image   6 with image   9 estimated: 1952x1098 (70ms)
+11:01:14 [App     ] Reference image   8 paired with 0 views
+11:01:14 [App     ] Reference image  10 paired with 0 views
+11:01:14 [App     ] Reference image  12 paired with 0 views
+11:01:14 [App     ] Reference image  14 paired with 1 views
+11:01:14 [App     ] Reference image  13 paired with 1 views
+11:01:14 [App     ] Depth-map for image  14 with image  13 estimated: 1952x1098 (80ms)
+11:01:14 [App     ] Depth-map for image  13 with image  14 estimated: 1952x1098 (70ms)
+11:01:14 [App     ] Reference image  19 paired with 0 views
+11:01:14 [App     ] Reference image   3 paired with 0 views
+11:01:14 [App     ] Reference image  22 paired with 0 views
+11:01:14 [App     ] Reference image   5 paired with 1 views
+11:01:14 [App     ] Depth-map for image   5 with image   7 estimated: 1952x1098 (70ms)
+11:01:14 [App     ] Reference image  26 paired with 1 views
+11:01:14 [App     ] Depth-map for image  26 with image  29 estimated: 1952x1098 (69ms)
+11:01:14 [App     ] Reference image  28 paired with 1 views
+11:01:14 [App     ] Depth-map for image  28 with image  25 estimated: 1952x1098 (71ms)
+11:01:15 [App     ] Reference image  29 paired with 2 views
+11:01:15 [App     ] Reference image  11 paired with 0 views
+11:01:15 [App     ] Reference image  15 paired with 0 views
+11:01:15 [App     ] Depth-map for image  29 estimated using  2 images: 1952x1098 (94ms)
+11:01:15 [App     ] Reference image  25 paired with 2 views
+11:01:15 [App     ] Depth-map for image  25 estimated using  2 images: 1952x1098 (79ms)
+11:01:15 [App     ] Reference image   9 paired with 0 views
+11:01:15 [App     ] Reference image   7 paired with 4 views
+11:01:15 [App     ] error: opening file 'C:/Users/Braden/Desktop/ECEN 404/OpenMVS/reconstruction_testing/output/output_set06/mvs/depth0010.dmap' for reading depth-data
+11:01:15 [App     ] Reference image   1 paired with 2 views
+11:01:15 [App     ] Depth-map for image   7 estimated using  4 images: 1952x1098 (119ms)
+11:01:15 [App     ] Depth-map for image   1 estimated using  2 images: 1952x1098 (86ms)
+11:01:16 [App     ] Reference image   0 paired with 2 views
+11:01:16 [App     ] error: opening file 'C:/Users/Braden/Desktop/ECEN 404/OpenMVS/reconstruction_testing/output/output_set06/mvs/depth0003.dmap' for reading depth-data
+11:01:16 [App     ] Reference image   4 paired with 1 views
+11:01:16 [App     ] Depth-map for image   0 estimated using  2 images: 1952x1098 (81ms)
+11:01:16 [App     ] Depth-map for image   4 with image   7 estimated: 1952x1098 (64ms)
+11:01:16 [App     ] Reference image   2 paired with 1 views
+11:01:16 [App     ] Reference image   6 paired with 1 views
+11:01:16 [App     ] error: opening file 'C:/Users/Braden/Desktop/ECEN 404/OpenMVS/reconstruction_testing/output/output_set06/mvs/depth0009.dmap' for reading depth-data
+11:01:16 [App     ] Depth-map for image   2 with image   6 estimated: 1952x1098 (68ms)
+11:01:16 [App     ] Depth-map for image   6 with image   9 estimated: 1952x1098 (60ms)
+11:01:16 [App     ] Reference image   8 paired with 0 views
+11:01:16 [App     ] Reference image  10 paired with 0 views
+11:01:16 [App     ] Reference image  12 paired with 0 views
+11:01:16 [App     ] Reference image  14 paired with 1 views
+11:01:17 [App     ] Reference image  13 paired with 1 views
+11:01:17 [App     ] Depth-map for image  14 with image  13 estimated: 1952x1098 (74ms)
+11:01:17 [App     ] Depth-map for image  13 with image  14 estimated: 1952x1098 (74ms)
+11:01:17 [App     ] Reference image  19 paired with 0 views
+11:01:17 [App     ] Reference image   3 paired with 0 views
+11:01:17 [App     ] Reference image  22 paired with 0 views
+11:01:17 [App     ] Reference image   5 paired with 1 views
+11:01:17 [App     ] Depth-map for image   5 with image   7 estimated: 1952x1098 (73ms)
+11:01:17 [App     ] Reference image  26 paired with 1 views
+11:01:17 [App     ] Depth-map for image  26 with image  29 estimated: 1952x1098 (78ms)
+11:01:17 [App     ] Reference image  28 paired with 1 views
+11:01:17 [App     ] Depth-map for image  28 with image  25 estimated: 1952x1098 (81ms)
+11:01:18 [App     ] Reference image  29 paired with 2 views
+11:01:18 [App     ] Reference image  11 paired with 0 views
+11:01:18 [App     ] Reference image  15 paired with 0 views
+11:01:18 [App     ] Reference image  25 paired with 2 views
+11:01:18 [App     ] Depth-map for image  29 estimated using  2 images: 1952x1098 (108ms)
+11:01:18 [App     ] Depth-map for image  25 estimated using  2 images: 1952x1098 (94ms)
+11:01:18 [App     ] Reference image   9 paired with 0 views
+11:01:18 [App     ] Reference image   7 paired with 4 views
+11:01:18 [App     ] error: opening file 'C:/Users/Braden/Desktop/ECEN 404/OpenMVS/reconstruction_testing/output/output_set06/mvs/depth0010.dmap' for reading depth-data
+11:01:18 [App     ] Reference image   1 paired with 2 views
+11:01:18 [App     ] Depth-map for image   7 estimated using  4 images: 1952x1098 (133ms)
+11:01:18 [App     ] Depth-map for image   1 estimated using  2 images: 1952x1098 (94ms)
+11:01:19 [App     ] error: depth map  14 can not be filtered
+11:01:19 [App     ] error: depth map  13 can not be filtered
+11:01:19 [App     ] Depth map   6 filtered using 3 other images: 499480/619271 depths discarded (205ms)
+11:01:19 [App     ] Depth map   5 filtered using 3 other images: 180606/383638 depths discarded (214ms)
+11:01:19 [App     ] Depth map  28 filtered using 3 other images: 266581/453615 depths discarded (220ms)
+11:01:19 [App     ] Depth map  26 filtered using 3 other images: 177998/519833 depths discarded (261ms)
+11:01:19 [App     ] Depth map  25 filtered using 3 other images: 145965/499169 depths discarded (262ms)
+11:01:19 [App     ] Depth map   7 filtered using 4 other images: 352993/610705 depths discarded (286ms)
+11:01:19 [App     ] Depth map   4 filtered using 4 other images: 144057/333127 depths discarded (300ms)
+11:01:19 [App     ] Depth map  29 filtered using 6 other images: 130848/502730 depths discarded (359ms)
+11:01:19 [App     ] Depth map   1 filtered using 6 other images: 87504/245949 depths discarded (371ms)
+11:01:19 [App     ] Depth map   2 filtered using 6 other images: 158140/310761 depths discarded (381ms)
+11:01:19 [App     ] Depth map   0 filtered using 7 other images: 270351/416827 depths discarded (395ms)
+11:01:22 [App     ] Depth-maps fused and filtered: 13 depth-maps, 3590772 depths, 161790 points (5%%) (2s179ms)
+11:01:22 [App     ] Densifying point-cloud completed: 161790 points (12s19ms)
+11:01:22 [App     ] Scene saved (194ms):
+	30 images (30 calibrated)
+	161790 points, 0 vertices, 0 faces
+11:01:22 [App     ] Point-cloud saved: 161790 points (36ms)
+11:01:22 [App     ] MEMORYINFO: {
+11:01:22 [App     ] 	PageFaultCount 1826486
+11:01:22 [App     ] 	PeakWorkingSetSize 1.56GB
+11:01:22 [App     ] 	WorkingSetSize 360.39MB
+11:01:22 [App     ] 	QuotaPeakPagedPoolUsage 382.26KB
+11:01:22 [App     ] 	QuotaPagedPoolUsage 376.34KB
+11:01:22 [App     ] 	QuotaPeakNonPagedPoolUsage 47.41KB
+11:01:22 [App     ] 	QuotaNonPagedPoolUsage 28.95KB
+11:01:22 [App     ] 	PagefileUsage 1.25GB
+11:01:22 [App     ] 	PeakPagefileUsage 2.34GB
+11:01:22 [App     ] } ENDINFO

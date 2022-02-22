@@ -1,0 +1,32 @@
+10:50:47 [App     ] Build date: Feb 16 2022, 11:12:45
+10:50:47 [App     ] CPU: AMD Ryzen 7 3700X 8-Core Processor              (16 cores)
+10:50:47 [App     ] RAM: 31.91GB Physical Memory 128.00TB Virtual Memory
+10:50:47 [App     ] OS: Windows 8 x64
+10:50:47 [App     ] Disk: 43.43GB (930.63GB) space
+10:50:47 [App     ] SSE & AVX compatible CPU & OS detected
+10:50:47 [App     ] Command line: TextureMesh scene_dense_mesh_refine.mvs --decimate 0.5 -w C:\Users\Braden\Desktop\ECEN 404\OpenMVS\reconstruction_testing\output\output_set02\mvs
+10:50:47 [App     ] MapSMtoCores for SM 8.6 is undefined; default to use 64 cores/SM
+10:50:48 [App     ] CUDA device 0 initialized: NVIDIA GeForce RTX 3080 (compute capability 8.6; memory 10.00GB)
+10:50:48 [App     ] Scene loaded (351ms):
+	11 images (11 calibrated) with a total of 63.22 MPixels (5.75 MPixels/image)
+	0 points, 437689 vertices, 873568 faces
+10:50:53 [App     ] Cleaned mesh: 219163 vertices, 436784 faces (5s116ms)
+10:50:54 [App     ] Cleaned mesh: 219163 vertices, 436784 faces (576ms)
+10:51:12 [App     ] Assigning the best view to each face completed: 436784 faces (18s750ms)
+10:51:16 [App     ] Generating texture atlas and image completed: 2400 patches, 4096 image size (3s989ms)
+10:51:16 [App     ] Mesh texturing completed: 219163 vertices, 436784 faces (22s768ms)
+10:51:19 [App     ] Scene saved (2s903ms):
+	11 images (11 calibrated)
+	0 points, 219163 vertices, 436784 faces
+10:51:20 [App     ] Mesh saved: 219163 vertices, 436784 faces (549ms)
+10:51:20 [App     ] MEMORYINFO: {
+10:51:20 [App     ] 	PageFaultCount 1828732
+10:51:20 [App     ] 	PeakWorkingSetSize 1.63GB
+10:51:20 [App     ] 	WorkingSetSize 346.23MB
+10:51:20 [App     ] 	QuotaPeakPagedPoolUsage 330.84KB
+10:51:20 [App     ] 	QuotaPagedPoolUsage 330.84KB
+10:51:20 [App     ] 	QuotaPeakNonPagedPoolUsage 50.59KB
+10:51:20 [App     ] 	QuotaNonPagedPoolUsage 22.97KB
+10:51:20 [App     ] 	PagefileUsage 544.15MB
+10:51:20 [App     ] 	PeakPagefileUsage 3.17GB
+10:51:20 [App     ] } ENDINFO

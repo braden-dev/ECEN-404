@@ -1,0 +1,58 @@
+11:01:29 [App     ] Build date: Feb 16 2022, 11:12:45
+11:01:29 [App     ] CPU: AMD Ryzen 7 3700X 8-Core Processor              (16 cores)
+11:01:29 [App     ] RAM: 31.91GB Physical Memory 128.00TB Virtual Memory
+11:01:29 [App     ] OS: Windows 8 x64
+11:01:29 [App     ] Disk: 42.34GB (930.63GB) space
+11:01:29 [App     ] SSE & AVX compatible CPU & OS detected
+11:01:29 [App     ] Command line: RefineMesh scene_dense_mesh.mvs --scales 1 --gradient-step 25.05 -w C:\Users\Braden\Desktop\ECEN 404\OpenMVS\reconstruction_testing\output\output_set06\mvs
+11:01:29 [App     ] MapSMtoCores for SM 8.6 is undefined; default to use 64 cores/SM
+11:01:29 [App     ] CUDA device 0 initialized: NVIDIA GeForce RTX 3080 (compute capability 8.6; memory 10.00GB)
+11:01:29 [App     ] Scene loaded (69ms):
+	30 images (30 calibrated) with a total of 245.28 MPixels (8.18 MPixels/image)
+	0 points, 75809 vertices, 151401 faces
+11:01:33 [App     ] Cleaned mesh: 7676 vertices, 15136 faces (869ms)
+11:01:33 [App     ] Cleaned mesh: 7675 vertices, 15136 faces (18ms)
+11:01:34 [App     ] warning: ignoring the following facet(s) violating the manifold constraint: 12696
+11:01:34 [App     ] Cleaned mesh: 8708 vertices, 17069 faces (26ms)
+11:01:34 [App     ] Mesh subdivided: 7675/15136 -> 8708/17069 vertices/faces
+11:01:36 [App     ] 	 1. f: 0.84969 (9.7576e-05)	g: 0.17007 (1.9530e-05 - 1.1715e-03)	s: 0.500	v:     0
+11:01:38 [App     ] 	 2. f: 0.81609 (9.3717e-05)	g: 0.13990 (1.6065e-05 - 1.0199e-03)	s: 0.490	v:     0
+11:01:39 [App     ] 	 3. f: 0.78928 (9.0639e-05)	g: 0.12398 (1.4238e-05 - 9.0959e-04)	s: 0.480	v:     0
+11:01:41 [App     ] 	 4. f: 0.76753 (8.8141e-05)	g: 0.10938 (1.2561e-05 - 8.1910e-04)	s: 0.471	v:     0
+11:01:43 [App     ] 	 5. f: 0.74934 (8.6052e-05)	g: 0.10054 (1.1546e-05 - 7.4866e-04)	s: 0.461	v:     0
+11:01:44 [App     ] 	 6. f: 0.73413 (8.4305e-05)	g: 0.09545 (1.0961e-05 - 6.9184e-04)	s: 0.452	v:     0
+11:01:46 [App     ] 	 7. f: 0.72103 (8.2801e-05)	g: 0.09890 (1.1357e-05 - 6.5093e-04)	s: 0.443	v:     0
+11:01:48 [App     ] 	 8. f: 0.70992 (8.1525e-05)	g: 0.09513 (1.0925e-05 - 6.1090e-04)	s: 0.434	v:     0
+11:01:49 [App     ] 	 9. f: 0.70017 (8.0405e-05)	g: 0.08734 (1.0029e-05 - 5.7604e-04)	s: 0.425	v:     0
+11:01:51 [App     ] 	10. f: 0.69157 (7.9418e-05)	g: 0.07981 (9.1654e-06 - 5.4182e-04)	s: 0.417	v:     0
+11:01:53 [App     ] 	11. f: 0.68380 (7.8525e-05)	g: 0.07552 (8.6727e-06 - 5.1470e-04)	s: 0.409	v:     0
+11:01:54 [App     ] 	12. f: 0.67704 (7.7749e-05)	g: 0.07498 (8.6106e-06 - 4.9126e-04)	s: 0.400	v:     0
+11:01:56 [App     ] 	13. f: 0.67072 (7.7023e-05)	g: 0.07454 (8.5602e-06 - 4.7351e-04)	s: 0.392	v:     0
+11:01:58 [App     ] 	14. f: 0.66551 (7.6425e-05)	g: 0.07122 (8.1788e-06 - 4.5664e-04)	s: 0.385	v:     0
+11:01:59 [App     ] 	15. f: 0.66027 (7.5823e-05)	g: 0.07085 (8.1358e-06 - 4.4187e-04)	s: 0.377	v:     0
+11:02:01 [App     ] 	16. f: 0.65554 (7.5280e-05)	g: 0.07224 (8.2958e-06 - 4.3033e-04)	s: 0.369	v:     0
+11:02:03 [App     ] 	17. f: 0.65115 (7.4776e-05)	g: 0.08505 (9.7674e-06 - 4.2321e-04)	s: 0.362	v:     0
+11:02:04 [App     ] 	18. f: 0.64725 (7.4328e-05)	g: 0.07068 (8.1167e-06 - 4.0704e-04)	s: 0.355	v:     0
+11:02:06 [App     ] 	19. f: 0.64342 (7.3888e-05)	g: 0.06332 (7.2715e-06 - 3.4977e-04)	s: 0.348	v:     0
+11:02:07 [App     ] 	20. f: 0.64033 (7.3534e-05)	g: 0.05424 (6.2283e-06 - 3.3626e-04)	s: 0.341	v:     0
+11:02:09 [App     ] 	21. f: 0.63746 (7.3203e-05)	g: 0.05267 (6.0480e-06 - 3.2763e-04)	s: 0.334	v:     0
+11:02:11 [App     ] 	22. f: 0.63485 (7.2904e-05)	g: 0.05953 (6.8367e-06 - 3.2340e-04)	s: 0.327	v:     0
+11:02:13 [App     ] 	23. f: 0.63243 (7.2626e-05)	g: 0.05272 (6.0540e-06 - 3.1202e-04)	s: 0.321	v:     0
+11:02:14 [App     ] 	24. f: 0.63004 (7.2352e-05)	g: 0.05209 (5.9817e-06 - 3.0538e-04)	s: 0.314	v:     0
+11:02:16 [App     ] 	25. f: 0.62782 (7.2096e-05)	g: 0.06869 (7.8880e-06 - 3.0550e-04)	s: 0.308	v:     0
+11:02:17 [App     ] Mesh refinement completed: 8708 vertices, 17069 faces (47s543ms)
+11:02:17 [App     ] Scene saved (8ms):
+	30 images (30 calibrated)
+	0 points, 8708 vertices, 17069 faces
+11:02:17 [App     ] Mesh saved: 8708 vertices, 17069 faces (6ms)
+11:02:17 [App     ] MEMORYINFO: {
+11:02:17 [App     ] 	PageFaultCount 2979891
+11:02:17 [App     ] 	PeakWorkingSetSize 8.52GB
+11:02:17 [App     ] 	WorkingSetSize 872.12MB
+11:02:17 [App     ] 	QuotaPeakPagedPoolUsage 331.03KB
+11:02:17 [App     ] 	QuotaPagedPoolUsage 330.78KB
+11:02:17 [App     ] 	QuotaPeakNonPagedPoolUsage 40.90KB
+11:02:17 [App     ] 	QuotaNonPagedPoolUsage 18.45KB
+11:02:17 [App     ] 	PagefileUsage 1.05GB
+11:02:17 [App     ] 	PeakPagefileUsage 8.73GB
+11:02:17 [App     ] } ENDINFO

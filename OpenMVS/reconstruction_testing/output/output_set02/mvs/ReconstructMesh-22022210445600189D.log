@@ -1,0 +1,33 @@
+10:44:56 [App     ] Build date: Dec 16 2021, 11:34:21
+10:44:56 [App     ] CPU: AMD Ryzen 7 3700X 8-Core Processor              (16 cores)
+10:44:56 [App     ] RAM: 31.91GB Physical Memory 128.00TB Virtual Memory
+10:44:56 [App     ] OS: Windows 8 x64
+10:44:56 [App     ] SSE & AVX compatible CPU & OS detected
+10:44:56 [App     ] Command line: scene_dense.mvs -w C:\Users\Braden\Desktop\ECEN 404\OpenMVS\reconstruction_testing\output\output_set02\mvs
+10:44:56 [App     ] MapSMtoCores for SM 8.6 is undefined; default to use 64 cores/SM
+10:44:56 [App     ] CUDA device 0 initialized: NVIDIA GeForce RTX 3080 (compute capability 8.6; memory 10.00GB)
+10:44:58 [App     ] Scene loaded (1s237ms):
+	11 images (11 calibrated) with a total of 15.81 MPixels (1.44 MPixels/image)
+	1120413 points, 0 vertices, 0 faces
+10:45:06 [App     ] Delaunay tetrahedralization completed: 1120413 points -> 478290 vertices, 3058688 (+216) cells, 6117484 (+324) faces (7s805ms)
+10:45:15 [App     ] Delaunay tetrahedras weighting completed: 3058904 cells, 6117808 faces (9s364ms)
+10:45:20 [App     ] Delaunay tetrahedras graph-cut completed (251262 flow): 471573 vertices, 943358 faces (5s296ms)
+10:45:30 [App     ] Mesh reconstruction completed: 471621 vertices, 943212 faces (32s166ms)
+10:45:33 [App     ] Cleaned mesh: 471359 vertices, 942182 faces (3s42ms)
+10:45:36 [App     ] Cleaned mesh: 471359 vertices, 942184 faces (2s666ms)
+10:45:37 [App     ] Cleaned mesh: 471359 vertices, 942184 faces (1s297ms)
+10:45:37 [App     ] Scene saved (540ms):
+	11 images (11 calibrated)
+	0 points, 471359 vertices, 942184 faces
+10:45:38 [App     ] Mesh saved: 471359 vertices, 942184 faces (368ms)
+10:45:38 [App     ] MEMORYINFO: {
+10:45:38 [App     ] 	PageFaultCount 973514
+10:45:38 [App     ] 	PeakWorkingSetSize 1.08GB
+10:45:38 [App     ] 	WorkingSetSize 157.44MB
+10:45:38 [App     ] 	QuotaPeakPagedPoolUsage 307.36KB
+10:45:38 [App     ] 	QuotaPagedPoolUsage 307.36KB
+10:45:38 [App     ] 	QuotaPeakNonPagedPoolUsage 26.02KB
+10:45:38 [App     ] 	QuotaNonPagedPoolUsage 24.56KB
+10:45:38 [App     ] 	PagefileUsage 363.85MB
+10:45:38 [App     ] 	PeakPagefileUsage 1.33GB
+10:45:38 [App     ] } ENDINFO

@@ -111,14 +111,14 @@ CAMERA_SENSOR_DB_DIRECTORY = find(CAMERA_SENSOR_DB_FILE)
 # Ask user for openMVG and openMVS directories if not found
 if not OPENMVG_BIN:
     # OPENMVG_BIN = input("openMVG binary folder?\n")
-    OPENMVG_BIN = "C:/Users/Braden/Desktop/OpenMVG/cmakeBin\Windows-AMD64-Release/Release"
+    OPENMVG_BIN = "C:/Users/Braden/Desktop/ECEN 404/OpenMVG/build"
 if not OPENMVS_BIN:
     # OPENMVS_BIN = input("openMVS binary folder?\n")
-    OPENMVS_BIN = "C:/Users/Braden/Desktop/OpenMVS2/build/bin/vc16/x64/Release"
+    OPENMVS_BIN = "C:/Users/Braden/Desktop/ECEN 404/OpenMVS/build"
     # OPENMVS_BIN = "C:/Users/Braden/Desktop/OpenMVS_Build"
 if not CAMERA_SENSOR_DB_DIRECTORY:
     # CAMERA_SENSOR_DB_DIRECTORY = input("openMVG camera database (%s) folder?\n" % CAMERA_SENSOR_DB_FILE)
-    CAMERA_SENSOR_DB_DIRECTORY = "C:/Users/Braden/Desktop/OpenMVG/openMVG/src/openMVG/exif/sensor_width_database"
+    CAMERA_SENSOR_DB_DIRECTORY = "C:/Users/Braden/Desktop/ECEN 404/OpenMVG/sensor_width_database"
 
 
 PRESET = {'SEQUENTIAL': [0, 1, 2, 3, 4, 5, 11, 12, 13, 14, 15],
@@ -190,10 +190,12 @@ class StepsStore:
             ["Intrinsics analysis",          # 0
              os.path.join(OPENMVG_BIN, "openMVG_main_SfMInit_ImageListing"),
              ["-i", "%input_dir%", "-o", "%matches_dir%", "-d", "%camera_file_params%", "-f", str(1.2*500)]],
+             #["-i", "%input_dir%", "-o", "%matches_dir%", "-d", "%camera_file_params%", "-f", str(1.2*3904)]],
              #["-i", "%input_dir%", "-o", "%matches_dir%", "-d", "%camera_file_params%"]],
             ["Compute features",             # 1
              os.path.join(OPENMVG_BIN, "openMVG_main_ComputeFeatures"),
-             ["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%", "-m", "SIFT", "-p", "ULTRA"]],
+             #["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%", "-m", "SIFT", "-p", "ULTRA"]],
+             ["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%", "-m", "SIFT"]],
             ["Compute pairs",                # 2
              os.path.join(OPENMVG_BIN, "openMVG_main_PairGenerator"),
              ["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%/pairs.bin"]],

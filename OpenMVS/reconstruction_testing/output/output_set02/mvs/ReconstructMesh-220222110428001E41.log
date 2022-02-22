@@ -1,0 +1,33 @@
+11:04:28 [App     ] Build date: Dec 16 2021, 11:34:21
+11:04:28 [App     ] CPU: AMD Ryzen 7 3700X 8-Core Processor              (16 cores)
+11:04:28 [App     ] RAM: 31.91GB Physical Memory 128.00TB Virtual Memory
+11:04:28 [App     ] OS: Windows 8 x64
+11:04:28 [App     ] SSE & AVX compatible CPU & OS detected
+11:04:28 [App     ] Command line: scene_dense.mvs -w C:\Users\Braden\Desktop\ECEN 404\OpenMVS\reconstruction_testing\output\output_set02\mvs
+11:04:28 [App     ] MapSMtoCores for SM 8.6 is undefined; default to use 64 cores/SM
+11:04:28 [App     ] CUDA device 0 initialized: NVIDIA GeForce RTX 3080 (compute capability 8.6; memory 10.00GB)
+11:04:29 [App     ] Scene loaded (133ms):
+	11 images (11 calibrated) with a total of 15.81 MPixels (1.44 MPixels/image)
+	99541 points, 0 vertices, 0 faces
+11:04:29 [App     ] Delaunay tetrahedralization completed: 99541 points -> 61883 vertices, 382737 (+170) cells, 765559 (+255) faces (798ms)
+11:04:30 [App     ] Delaunay tetrahedras weighting completed: 382907 cells, 765814 faces (460ms)
+11:04:31 [App     ] Delaunay tetrahedras graph-cut completed (61886.5 flow): 52890 vertices, 105800 faces (706ms)
+11:04:31 [App     ] Mesh reconstruction completed: 52901 vertices, 105774 faces (2s774ms)
+11:04:32 [App     ] Cleaned mesh: 52888 vertices, 105683 faces (292ms)
+11:04:32 [App     ] Cleaned mesh: 52891 vertices, 105682 faces (229ms)
+11:04:32 [App     ] Cleaned mesh: 52891 vertices, 105682 faces (117ms)
+11:04:32 [App     ] Scene saved (62ms):
+	11 images (11 calibrated)
+	0 points, 52891 vertices, 105682 faces
+11:04:32 [App     ] Mesh saved: 52891 vertices, 105682 faces (42ms)
+11:04:32 [App     ] MEMORYINFO: {
+11:04:32 [App     ] 	PageFaultCount 128272
+11:04:32 [App     ] 	PeakWorkingSetSize 207.93MB
+11:04:32 [App     ] 	WorkingSetSize 93.70MB
+11:04:32 [App     ] 	QuotaPeakPagedPoolUsage 307.69KB
+11:04:32 [App     ] 	QuotaPagedPoolUsage 307.69KB
+11:04:32 [App     ] 	QuotaPeakNonPagedPoolUsage 22.97KB
+11:04:32 [App     ] 	QuotaNonPagedPoolUsage 21.91KB
+11:04:32 [App     ] 	PagefileUsage 289.65MB
+11:04:32 [App     ] 	PeakPagefileUsage 411.00MB
+11:04:32 [App     ] } ENDINFO

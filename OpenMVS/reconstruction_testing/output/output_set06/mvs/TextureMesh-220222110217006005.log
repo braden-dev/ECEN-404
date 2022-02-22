@@ -1,0 +1,32 @@
+11:02:17 [App     ] Build date: Feb 16 2022, 11:12:45
+11:02:17 [App     ] CPU: AMD Ryzen 7 3700X 8-Core Processor              (16 cores)
+11:02:17 [App     ] RAM: 31.91GB Physical Memory 128.00TB Virtual Memory
+11:02:17 [App     ] OS: Windows 8 x64
+11:02:17 [App     ] Disk: 42.86GB (930.63GB) space
+11:02:17 [App     ] SSE & AVX compatible CPU & OS detected
+11:02:17 [App     ] Command line: TextureMesh scene_dense_mesh_refine.mvs --decimate 0.5 -w C:\Users\Braden\Desktop\ECEN 404\OpenMVS\reconstruction_testing\output\output_set06\mvs
+11:02:17 [App     ] MapSMtoCores for SM 8.6 is undefined; default to use 64 cores/SM
+11:02:17 [App     ] CUDA device 0 initialized: NVIDIA GeForce RTX 3080 (compute capability 8.6; memory 10.00GB)
+11:02:17 [App     ] Scene loaded (7ms):
+	30 images (30 calibrated) with a total of 245.28 MPixels (8.18 MPixels/image)
+	0 points, 8708 vertices, 17069 faces
+11:02:17 [App     ] Cleaned mesh: 4415 vertices, 8533 faces (48ms)
+11:02:17 [App     ] Cleaned mesh: 4415 vertices, 8533 faces (7ms)
+11:02:19 [App     ] Assigning the best view to each face completed: 8533 faces (2s407ms)
+11:02:22 [App     ] Generating texture atlas and image completed: 199 patches, 8192 image size (2s274ms)
+11:02:22 [App     ] Mesh texturing completed: 4415 vertices, 8533 faces (4s684ms)
+11:02:30 [App     ] Scene saved (8s258ms):
+	30 images (30 calibrated)
+	0 points, 4415 vertices, 8533 faces
+11:02:31 [App     ] Mesh saved: 4415 vertices, 8533 faces (874ms)
+11:02:31 [App     ] MEMORYINFO: {
+11:02:31 [App     ] 	PageFaultCount 1774752
+11:02:31 [App     ] 	PeakWorkingSetSize 3.14GB
+11:02:31 [App     ] 	WorkingSetSize 1017.43MB
+11:02:31 [App     ] 	QuotaPeakPagedPoolUsage 330.84KB
+11:02:31 [App     ] 	QuotaPagedPoolUsage 330.84KB
+11:02:31 [App     ] 	QuotaPeakNonPagedPoolUsage 44.62KB
+11:02:31 [App     ] 	QuotaNonPagedPoolUsage 22.84KB
+11:02:31 [App     ] 	PagefileUsage 1.19GB
+11:02:31 [App     ] 	PeakPagefileUsage 3.34GB
+11:02:31 [App     ] } ENDINFO

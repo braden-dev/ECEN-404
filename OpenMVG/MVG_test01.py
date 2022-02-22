@@ -9,10 +9,10 @@
 #
 
 # Indicate the openMVG binary directory
-OPENMVG_SFM_BIN = "C:/Users/Braden/Desktop/OpenMVG/cmakeBin/Windows-AMD64-Release/Release"
+OPENMVG_SFM_BIN = "C:/Users/Braden/Desktop/ECEN 404/OpenMVG/build"
 
 # Indicate the openMVG camera sensor width directory
-CAMERA_SENSOR_WIDTH_DIRECTORY = "C:/Users/Braden/Desktop/OpenMVG/openMVG/src/software/SfM" + "/../../openMVG/exif/sensor_width_database"
+CAMERA_SENSOR_WIDTH_DIRECTORY = "C:/Users/Braden/Desktop/ECEN 404/OpenMVG/sensor_width_database"
 
 import os
 import subprocess
