@@ -1,0 +1,10 @@
+Name: Braden DeVargas
+UIN: 127007068
+
+Updates:
+1) Researched different software that can perform 3D reconstruction from a set of 2D images
+2) Spent time using them and reading their documentation to figure out which software is the
+   best for my purposes and which software is most easily automated using a programming script.
+
+The next step is to start writing a script to automate the 3D reconstruction software so that
+I can use it on the HoloLens to create 3D models of specific objects seen by the HoloLens cameras.

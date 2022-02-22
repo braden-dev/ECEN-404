@@ -1,0 +1,12 @@
+Name: Braden DeVargas
+UIN: 127007068
+
+Updates:
+1) Created a local Python server that can connect with Unity to share data/pictures
+2) Created a MySQL database that interacts with the Pyton server to store the data/pictures sent to/from Unity
+3) Modified a Python script that runs OpenMVG, an open-source Python library used for 3D reconstruction, and made it so that when Unity sends pictures to the Python server, the OpenMVG script gets run on those images
+
+Next steps:
+1) Making sure the OpenMVG script has the best settings for my application
+2) Streamlining everything so that it can all work in a real-world setting
+3) Testing on the HoloLens to make sure no new issues arise

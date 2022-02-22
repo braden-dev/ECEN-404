@@ -1,0 +1,10 @@
+Name: Braden DeVargas
+UIN: 127007068
+
+Updates:
+1) Used open-source structure from motion libraries (OpenMVG and OpenMVS) to reconstruct 3D models from images
+2) Tested the results to try to get the best quality possible
+
+Next steps:
+1) Complete research on comparing 3D models
+2) Begin working on the 3D model comparision code/agorithm

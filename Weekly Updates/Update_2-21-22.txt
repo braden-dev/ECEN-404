@@ -1,0 +1,15 @@
+Name: Braden DeVargas
+UIN: 127007068
+
+Updates:
+1) Fixed 3D reconstruction pipeline issues
+>> Now able to go from 2D images to 3D model using one script
+2) Researched ways to compare two 3D models
+>> One idea is to use Kabsch's algorithm to compare two lists of three-dimensional points
+   and to figure out the best transform from one list to the other
+>> Wrote script to get the list of 3D points from the 3D models and working to implement/test
+   the algorithm
+
+Next steps:
+1) Figure out just how good Vuforia is get what metric I need to beat/match with my system
+2) Continue implementation of 3D comparison subsystem
