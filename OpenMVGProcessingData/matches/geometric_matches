@@ -1,7 +1,7 @@
 graph 1 {
 node [shape=circle]
  n9 --  n10
- n8 --  n9
+ n8 --  n10
  n7 --  n10
  n7 --  n9
  n7 --  n8
@@ -37,8 +37,8 @@ node [shape=circle]
  n1 --  n2
  n0 --  n10
  n0 --  n9
- n0 --  n8
  n0 --  n7
+ n0 --  n6
  n0 --  n5
  n0 --  n4
  n0 --  n3

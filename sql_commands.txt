@@ -1,0 +1,7 @@
+SQL Commands:
+1) set auto_inc to zero:
+> alter table images auto_increment=0;
+2) show a column in a table
+> SELECT id FROM images;
+3) delete the data in a table:
+> delete from images;

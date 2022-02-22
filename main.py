@@ -19,7 +19,11 @@ class MyServer(BaseHTTPRequestHandler):
 
         if(self.path == "/result"):
             getImagesFromDB()
-            exec(open("MVG_test01.py").read())
+            #OpenMVG files that will do 3D reconstruciton on the images
+            #exec(open("MVG_test01.py").read())
+
+            #test script to be run when testing
+            exec(open("test.py").read())
         
         self.wfile.write(bytes("<p>Request: %s</p>" % self.path, "utf-8"))
 
@@ -28,14 +32,16 @@ class MyServer(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html') 
         self.end_headers()
 
-        form = cgi.FieldStorage(fp=self.rfile,headers=self.headers,environ={'REQUEST_METHOD': 'POST'})
+        form = cgi.FieldStorage(fp=self.rfile,
+            headers=self.headers,environ={'REQUEST_METHOD': 'POST'})
         formList = form.getlist("imageFromUnity")
         #print("formList length: " + str(len(formList)))
         for i in range(len(formList)):
             value = formList[i]
             insert_images(value, (i+1))
 
-        self.wfile.write("POST request for {}".format(self.path).encode('utf-8'))
+        self.wfile.write("POST request for {}".
+                    format(self.path).encode('utf-8'))
 
 #main that runs the server
 if __name__ == "__main__":        
