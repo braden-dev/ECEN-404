@@ -1,0 +1,11 @@
+Name: Braden DeVargas
+UIN: 127007068
+
+Updates:
+1) Spent more time researching algorithms that can compare two 3D models/point clouds
+2) Got 3D model comparison software “working” (needs improvements)
+
+Next steps:
+1) Improve 3D model comparison software
+2) Implement iterative closest point (ICP) algorithm for tight point cloud alignment
+3) Interpret/utilize transormation data to be used in Unity
