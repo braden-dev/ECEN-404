@@ -8,4 +8,4 @@ Updates:
 Next steps:
 1) Improve 3D model comparison software
 2) Implement iterative closest point (ICP) algorithm for tight point cloud alignment
-3) Interpret/utilize transormation data to be used in Unity
+3) Interpret/utilize transformation data to be used in Unity
