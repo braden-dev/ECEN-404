@@ -1,0 +1,15 @@
+Name: Braden DeVargas
+UIN: 127007068
+
+Updates:
+1) Improved 3D model comparison pipeline so that it can:
+>> match up the rover model well
+>> the octagon with a hole in it a good portion of the time 
+2) Tested the comparison system with images from the HoloLens and while the images are slightly lower in quality than my phone's image, that didn't seem to really worsen the results
+
+Notes: The results I obtained are with a lot of manual manipulation of the reconstructed 3d models/point clouds. Given the time left to work on this project and the scope of the project, it might not be possible to implement all the steps to automate the entire project's system. However, once all the major pieces are implemented, I will spend as much time as possible improving the system's results, speed, and automation.
+
+Next steps:
+1) Understand how to interpret the transformation data I'm getting from the comparison system
+2) Use that transformation data to determine the object's orientation in the real world
+3) Use Unity to display a hologram relative to the object given its orientation from the previous subsystems
