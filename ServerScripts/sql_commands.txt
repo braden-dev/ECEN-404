@@ -5,3 +5,6 @@ SQL Commands:
 > SELECT id FROM images;
 3) delete the data in a table:
 > delete from images;
+4) connect to database
+> connect [db_name];
+>> ex: connect ecen404;

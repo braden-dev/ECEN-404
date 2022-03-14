@@ -6,9 +6,10 @@ from sqlConnection import *
 import os
 import subprocess
 import sys
+from test import *
 
-hostName = "localhost"
-serverPort = 8888
+hostName = "0.0.0.0"
+serverPort = 8000
 
 class MyServer(BaseHTTPRequestHandler):
 
@@ -18,22 +19,28 @@ class MyServer(BaseHTTPRequestHandler):
         self.end_headers()
 
         if(self.path == "/result"):
-            getImagesFromDB()
+            # getImagesFromDB()
             #OpenMVG files that will do 3D reconstruciton on the images
             #exec(open("MVG_test01.py").read())
 
             #test script to be run when testing
-            exec(open("test.py").read())
+            # print(testResult)
+            getImagesFromDB()
+            testResult = sendTestData()
+            self.wfile.write(bytes(str(testResult), "utf-8"))
+            clearDatabase()
+
+        if(self.path == "/mrp"):
+            os.system('python ..\\OpenMVS\\ModelReconstructionPipeline-Thesis.py "C:\\Users\\Braden\\Desktop\\ECEN 404\\FromDatabase" "C:\\Users\\Braden\\Desktop\\ECEN 404\\MvgMvsOutput"')
         
-        self.wfile.write(bytes("<p>Request: %s</p>" % self.path, "utf-8"))
+        #self.wfile.write(bytes("<p>Request: %s</p>" % self.path, "utf-8"))
 
     def do_POST(self):
         self.send_response(200)
         self.send_header('Content-type', 'text/html') 
         self.end_headers()
 
-        form = cgi.FieldStorage(fp=self.rfile,
-            headers=self.headers,environ={'REQUEST_METHOD': 'POST'})
+        form = cgi.FieldStorage(fp=self.rfile, headers=self.headers,environ={'REQUEST_METHOD': 'POST'})
         formList = form.getlist("imageFromUnity")
         #print("formList length: " + str(len(formList)))
         for i in range(len(formList)):
