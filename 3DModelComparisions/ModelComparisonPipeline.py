@@ -3,7 +3,7 @@ import open3d as o3d
 import numpy as np
 import copy
 
-voxel_size = 20  # means 4m for this dataset
+voxel_size = 10  # means 4m for this dataset
 
 def draw_registration_result(source, target, transformation):
     source_temp = copy.deepcopy(source)
@@ -52,8 +52,8 @@ def prepare_dataset(voxel_size):
     #Octagon Models
     # source = o3d.io.read_point_cloud("ReconstructedCenteredOctagon.pcd")
     # source = o3d.io.read_point_cloud("recon-source-phone-02.pcd")
-    source = o3d.io.read_point_cloud("closeup-scene-source-test02-hololens.pcd")
-    target = o3d.io.read_point_cloud("TargetOctagon.pcd")
+    source = o3d.io.read_point_cloud("closeup-scene-source-test03-hololens.pcd")
+    target = o3d.io.read_point_cloud("TargetOctagonRealPos01.pcd")
 
     trans_init = np.asarray([[0.0, 0.0, 1.0, 0.0], [1.0, 0.0, 0.0, 0.0],
                              [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 0.0, 1.0]])
@@ -70,53 +70,53 @@ def prepare_dataset(voxel_size):
 source, target, source_down, target_down, source_fpfh, target_fpfh = prepare_dataset(voxel_size)
 
 #RANSAC 
-# def execute_global_registration(source_down, target_down, source_fpfh,
-#                                 target_fpfh, voxel_size):
-#     distance_threshold = voxel_size * 1.5
-#     # distance_threshold = voxel_size * 300
-#     print(":: RANSAC registration on downsampled point clouds.")
-#     print("   Since the downsampling voxel size is %.3f," % voxel_size)
-#     print("   we use a liberal distance threshold %.3f." % distance_threshold)
-#     result = o3d.pipelines.registration.registration_ransac_based_on_feature_matching(
-#         source_down, target_down, source_fpfh, target_fpfh, False, distance_threshold,
-#         o3d.pipelines.registration.TransformationEstimationPointToPoint(False),
-#         4, [
-#             o3d.pipelines.registration.CorrespondenceCheckerBasedOnEdgeLength(
-#                 0.9),
-#             o3d.pipelines.registration.CorrespondenceCheckerBasedOnDistance(
-#                 distance_threshold)
-#         ], 
-#         o3d.pipelines.registration.RANSACConvergenceCriteria(4000000, 500))
-#         #o3d.pipelines.registration.RANSACConvergenceCriteria(9000000, 1000))
-#     # result = o3d.pipelines.registration.registration_ransac_based_on_feature_matching(
-#     #     source_down, target_down, source_fpfh, target_fpfh, distance_threshold)
-#     return result
-
-# result_ransac = execute_global_registration(source_down, target_down,
-#                                             source_fpfh, target_fpfh,
-#                                             voxel_size)
-
-# print(result_ransac)
-# draw_registration_result(source_down, target_down, result_ransac.transformation)
-
-# Fast RANSAC
-def execute_fast_global_registration(source_down, target_down, source_fpfh,
-                                     target_fpfh, voxel_size):
-    distance_threshold = voxel_size * 0.5
-    print(":: Apply fast global registration with distance threshold %.3f" \
-            % distance_threshold)
-    result = o3d.pipelines.registration.registration_fgr_based_on_feature_matching(
-        source_down, target_down, source_fpfh, target_fpfh,
-        o3d.pipelines.registration.FastGlobalRegistrationOption(
-            maximum_correspondence_distance=distance_threshold))
+def execute_global_registration(source_down, target_down, source_fpfh,
+                                target_fpfh, voxel_size):
+    distance_threshold = voxel_size * 1.5
+    # distance_threshold = voxel_size * 300
+    print(":: RANSAC registration on downsampled point clouds.")
+    print("   Since the downsampling voxel size is %.3f," % voxel_size)
+    print("   we use a liberal distance threshold %.3f." % distance_threshold)
+    result = o3d.pipelines.registration.registration_ransac_based_on_feature_matching(
+        source_down, target_down, source_fpfh, target_fpfh, False, distance_threshold,
+        o3d.pipelines.registration.TransformationEstimationPointToPoint(False),
+        4, [
+            o3d.pipelines.registration.CorrespondenceCheckerBasedOnEdgeLength(
+                0.9),
+            o3d.pipelines.registration.CorrespondenceCheckerBasedOnDistance(
+                distance_threshold)
+        ], 
+        o3d.pipelines.registration.RANSACConvergenceCriteria(4000000, 500))
+        #o3d.pipelines.registration.RANSACConvergenceCriteria(9000000, 1000))
+    # result = o3d.pipelines.registration.registration_ransac_based_on_feature_matching(
+    #     source_down, target_down, source_fpfh, target_fpfh, distance_threshold)
     return result
 
-result_ransac = execute_fast_global_registration(source_down, target_down,
+result_ransac = execute_global_registration(source_down, target_down,
                                             source_fpfh, target_fpfh,
                                             voxel_size)
 
 print(result_ransac)
 draw_registration_result(source_down, target_down, result_ransac.transformation)
+
+# Fast RANSAC
+# def execute_fast_global_registration(source_down, target_down, source_fpfh,
+#                                      target_fpfh, voxel_size):
+#     distance_threshold = voxel_size * 0.5
+#     print(":: Apply fast global registration with distance threshold %.3f" \
+#             % distance_threshold)
+#     result = o3d.pipelines.registration.registration_fgr_based_on_feature_matching(
+#         source_down, target_down, source_fpfh, target_fpfh,
+#         o3d.pipelines.registration.FastGlobalRegistrationOption(
+#             maximum_correspondence_distance=distance_threshold))
+#     return result
+
+# result_ransac = execute_fast_global_registration(source_down, target_down,
+#                                             source_fpfh, target_fpfh,
+#                                             voxel_size)
+
+# print(result_ransac)
+# draw_registration_result(source_down, target_down, result_ransac.transformation)
 
 # Local refinement with point-to-plane ICP
 def refine_registration(source, target, source_fpfh, target_fpfh, voxel_size):

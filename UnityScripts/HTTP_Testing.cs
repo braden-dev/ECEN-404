@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class HTTP_Testing : MonoBehaviour
 {
-    string uploadURL = "http://localhost:8888";
-    string getURL = "http://loclahost:8888/request";
+    string uploadURL = "http://192.168.0.25:8000";
+    string getURL = "http://192.168.0.25:8000";
 
     List<string> imageNames;
     HololensPhotoCapture data;

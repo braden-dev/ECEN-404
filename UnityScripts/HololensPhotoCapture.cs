@@ -15,6 +15,7 @@ public class HololensPhotoCapture : MonoBehaviour
     private bool takePics = false; //used for stopping and starting the picture taking process
     private KeywordRecognizer keywordRecognizerStart;
     private KeywordRecognizer keywordRecognizerStop;
+    public int numOfPics = 0; //counts the number of pictures taken
 
     public List<string> imageFileNames = new List<string>();
 
@@ -46,6 +47,7 @@ public class HololensPhotoCapture : MonoBehaviour
             VuforiaBehaviour.Instance.enabled = false;
 
             startOnce = 2;
+            //numOfPics = 0; //resets the number of pictures back to zero
         }
     }
 
@@ -65,6 +67,7 @@ public class HololensPhotoCapture : MonoBehaviour
     //starts the picture taking process
     void TakePicture()
     {
+        numOfPics += 1; //adds 1 every time a pic is taken
         goAgain = false;
         PhotoCapture.CreateAsync(false, OnPhotoCaptureCreated);
     }
@@ -97,6 +100,7 @@ public class HololensPhotoCapture : MonoBehaviour
                 {
                     Debug.Log("Saving another photo.");
                     TakePicture();
+
                 }
                 period = 0;
             }
@@ -130,11 +134,11 @@ public class HololensPhotoCapture : MonoBehaviour
         if (result.success)
         {
             //Debug.Log("Made it into OnPhotoModeStarted: result SUCCESS");
-            string filename = string.Format(@"CapturedImage{0}_n.jpg", Time.time);
+            string filename = string.Format("Pic" + numOfPics + ".jpg", Time.time);
             imageFileNames.Add(filename);
 
             //PC path
-            //string filePath = System.IO.Path.Combine("C:\\Users\\Braden\\OneDrive\\HoloLensShared\\UnityPics\\", filename);
+            //string filePath = System.IO.Path.Combine("C:\\Users\\Braden\\Desktop\\ECEN 404\\FromUnity\\", filename);
 
             //HoloLens path
             string filePath = System.IO.Path.Combine(Application.persistentDataPath, filename);
