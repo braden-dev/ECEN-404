@@ -7,6 +7,7 @@ import os
 import subprocess
 import sys
 from test import *
+from ComparisonImplementation import *
 
 hostName = "0.0.0.0"
 serverPort = 8000
@@ -30,8 +31,29 @@ class MyServer(BaseHTTPRequestHandler):
             self.wfile.write(bytes(str(testResult), "utf-8"))
             clearDatabase()
 
+        #model reconstruction pipeline runs
         if(self.path == "/mrp"):
-            os.system('python ..\\OpenMVS\\ModelReconstructionPipeline-Thesis.py "C:\\Users\\Braden\\Desktop\\ECEN 404\\FromDatabase" "C:\\Users\\Braden\\Desktop\\ECEN 404\\MvgMvsOutput"')
+            # Gets the images from the database
+            getImagesFromDB() 
+
+            # Runs the model reconstruction pipeline from the images in the database and outputs it to a folder
+            # os.system('python ..\\OpenMVS\\ModelReconstructionPipeline-Thesis.py "C:\\Users\\Braden\\Desktop\\ECEN 404\\FromDatabase" "C:\\Users\\Braden\\Desktop\\ECEN 404\\MvgMvsOutput-Pipeline"')
+
+            # Copies the Dense Mesh file from the reconstruction pipeline output
+            # os.system('copy ..\\MvgMvsOutput-Pipeline\\mvs\\scene_dense_mesh_refine.ply') # real file
+            os.system('copy ..\\OpenMVS\\reconstruction_testing\\output\\output_set17\\mvs\\scene_dense_mesh_refine.ply') # test file
+
+            # Turns that .ply file into a .pcd (point cloud) file to compare
+            os.system('python PCD-FileGeneration.py')
+
+            # Calls the function in the ComparisonImplementation script that compares the two point clouds
+            # output = nRANSAC_onceICP()
+
+            # Writes the output (in the form [ x y z]) to the server which send that back to Unity )
+            # self.wfile.write(bytes(str(output), "utf-8"))
+
+            # Clears the files from the database preparing it for the next set of images
+            clearDatabase()
         
         #self.wfile.write(bytes("<p>Request: %s</p>" % self.path, "utf-8"))
 
