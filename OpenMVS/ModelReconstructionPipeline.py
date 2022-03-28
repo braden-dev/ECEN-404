@@ -52,6 +52,7 @@ Passthrough:
   e.g. --1 p ULTRA to use the ULTRA preset in openMVG_main_ComputeFeatures
 """
 
+from lzma import PRESET_DEFAULT
 import os
 import subprocess
 import sys
@@ -122,9 +123,11 @@ PRESET = {'SEQUENTIAL': [0, 1, 2, 3, 4, 5, 11, 12, 13, 14, 15],
           'MVG_SEQ': [0, 1, 2, 3, 4, 5, 7, 8, 9, 11],
           'MVG_GLOBAL': [0, 1, 2, 3, 4, 6, 7, 8, 9, 11],
           'MVS': [12, 13, 14, 15],
-          'MVS_SGM': [16, 17]}
+          'MVS_SGM': [16, 17],
+          'MyOwnPipeline':[0,1,2,3,4,5,7,8,9,11,12,13,14,15,16,17]}
 
-PRESET_DEFAULT = 'SEQUENTIAL'
+# PRESET_DEFAULT = 'SEQUENTIAL'
+PRESET_DEFAULT = 'MyOwnPipeline'
 
 # HELPERS for terminal colors
 BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE = range(8)
@@ -186,13 +189,13 @@ class StepsStore:
             ["Intrinsics analysis",          # 0
              os.path.join(OPENMVG_BIN, "openMVG_main_SfMInit_ImageListing"),
              #["-i", "%input_dir%", "-o", "%matches_dir%", "-d", "%camera_file_params%", "-f", str(1.2*500)]],
-             #["-i", "%input_dir%", "-o", "%matches_dir%", "-d", "%camera_file_params%", "-f", str(1.2*3904)]],
+             ["-i", "%input_dir%", "-o", "%matches_dir%", "-d", "%camera_file_params%", "-f", str(1.2*3904)]],
              #["-i", "%input_dir%", "-o", "%matches_dir%", "-d", "%camera_file_params%", "-f", str(1.2*4032)]],
-             ["-i", "%input_dir%", "-o", "%matches_dir%", "-d", "%camera_file_params%"]],
+            #  ["-i", "%input_dir%", "-o", "%matches_dir%", "-d", "%camera_file_params%"]],
             ["Compute features",             # 1
              os.path.join(OPENMVG_BIN, "openMVG_main_ComputeFeatures"),
-             # ["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%", "-m", "SIFT", "-p", "ULTRA"]],
-             ["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%", "-m", "SIFT"]],
+             ["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%", "-m", "SIFT", "-p", "ULTRA"]],
+            #  ["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%", "-m", "SIFT"]],
             ["Compute pairs",                # 2
              os.path.join(OPENMVG_BIN, "openMVG_main_PairGenerator"),
              ["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%/pairs.bin"]],
@@ -227,7 +230,8 @@ class StepsStore:
              ["-i", "%reconstruction_dir%/sfm_data.bin", "-o", "%mvs_dir%/scene.mvs", "-d", "%mvs_dir%/images"]],
             ["Densify point cloud",          # 12
              os.path.join(OPENMVS_BIN, "DensifyPointCloud"),
-             ["scene.mvs", "--dense-config-file", "Densify.ini", "--resolution-level", "1", "--number-views", "8", "-w", "%mvs_dir%"]],
+             #["scene.mvs", "--dense-config-file", "Densify.ini", "--resolution-level", "1", "--number-views", "8", "-w", "%mvs_dir%"]],
+             ["scene.mvs", "--dense-config-file", "Densify.ini", "--resolution-level", "0", "--number-views", "8", "-w", "%mvs_dir%", "--filter-point-cloud", "1"]],
             ["Reconstruct the mesh",         # 13
              os.path.join(OPENMVS_BIN, "ReconstructMesh"),
              #["scene_dense.mvs", "-w", "%mvs_dir%", "--image-points-file",  "imagePoints.ini"]],

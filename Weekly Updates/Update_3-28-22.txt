@@ -1,0 +1,11 @@
+Name: Braden DeVargas
+UIN: 127007068
+
+Updates:
+1) Determined a way to display holograms relative to a real-world object based on the orientation shift from the model comparison subsystem
+2) Spent time validating the model reconstruction subsystem 
+3) Spent time testing and validating the system's data flow from the HoloLens to the server
+
+Next Steps:
+1) Test the entire system with a real-world example to see how well it works
+2) Validate the major parts of the system prior to the thesis deadline (April 4th)

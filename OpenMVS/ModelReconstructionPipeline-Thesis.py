@@ -55,8 +55,8 @@ class StepsStore:
              #["-i", "%input_dir%", "-o", "%matches_dir%", "-d", "%camera_file_params%"]],
             ["Compute features",             # 1
              os.path.join(OPENMVG_BIN, "openMVG_main_ComputeFeatures"),
-             #["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%", "-m", "SIFT", "-p", "ULTRA"]],
-             ["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%", "-m", "SIFT"]],
+             ["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%", "-m", "SIFT", "-p", "ULTRA"]],
+            #  ["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%", "-m", "SIFT"]],
             ["Compute pairs",                # 2
              os.path.join(OPENMVG_BIN, "openMVG_main_PairGenerator"),
              ["-i", "%matches_dir%/sfm_data.json", "-o", "%matches_dir%/pairs.bin"]],

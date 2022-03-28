@@ -1,25 +1,25 @@
 from ModelComparisonCoreFunctions import *
 
-def nRANSAC_onceICP():
+def nRANSAC_onceICP(sourcePCD, targetPCD):
     RANSACcorrespondanceSetSizeVec = []
     ICPcorrespondanceSetSizeVec = []
-    maxRCSS = 0
+    # maxRCSS = 0
     maxICPCSS = 0
-    num = 0
-    start = time.time()
+    # num = 0
+    # start = time.time()
 
     totalRuns = 0
     goodRuns = 0
 
+    # Runs n times 
     for i in range(10):
-        # print("hi")
         #step 1 - pre-processing
-        source, target, source_down, target_down, source_fpfh, target_fpfh = prepare_dataset(voxel_size)
+        source, target, source_down, target_down, source_fpfh, target_fpfh = prepare_dataset(voxel_size, sourcePCD, targetPCD)
 
         #step 2 - RANSAC
         result_ransac = execute_global_registration(source_down, target_down, source_fpfh, target_fpfh, voxel_size)
 
-        #step 2-b - Fast RANSAC
+        #step 2-b - Fast RANSAC -- INACCURATE
         # result_ransac = execute_fast_global_registration(source_down, target_down, source_fpfh, target_fpfh, voxel_size)
 
         result_ransac_split = str(result_ransac).split(" ")
@@ -48,7 +48,7 @@ def nRANSAC_onceICP():
     # print(RANSACcorrespondanceSetSizeVec)
     # print(ICPcorrespondanceSetSizeVec)
     # print(num)
-    # draw_registration_result(source, target, bestICP.transformation)
+    draw_registration_result(source, target, bestICP.transformation)
 
     # count = 0
     # for i in ICPcorrespondanceSetSizeVec:
@@ -59,12 +59,17 @@ def nRANSAC_onceICP():
     # print(f"Ratio: {float(count/totalRuns)}")
     # print(bestICP.transformation)
 
-    T = bestICP.transformation.copy() # the 4x4 matrix you obtained
-    rotation = T[:3, :3]
-    # print(rotation)
-    # translation = T[:3, 3]
-    # print(translation)
+    T = bestICP.transformation.copy() # the 4x4 matrix obtained
+    rotation = T[:3, :3] # rotation of the point cloud as a 3x3 matrix
+    # translation = T[:3, 3] # translation of the point cloud as a 3x1 matrix
+
     # set degrees to False if you want radian value
     euler_angle = Rotation.from_matrix(rotation).as_euler('xyz', degrees=True)
+
+    # print("Rotation 3x3 Matrix:")
+    # print(rotation)
+    # print()
+    # print("Rotation in Euler Angles:")
+    # print(euler_angle)
     
     return euler_angle

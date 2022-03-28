@@ -1,0 +1,10 @@
+Name: Braden DeVargas
+UIN: 127007068
+
+Updates:
+1) Worked on setting up the whole pipeline of data between the HoloLens and the external Python server
+2) Created a model cropping script that uses density maps to remove the unnecessary points leaving only the object of interest with a little background in the 3D model
+
+Next steps:
+1) Use that transformation data to determine the object's orientation in the real world in a real-world example
+2) Use Unity to display a hologram relative to the object given its orientation from the previous subsystems in a real-world example

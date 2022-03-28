@@ -5,7 +5,7 @@ import copy
 import time
 from scipy.spatial.transform import Rotation
 
-voxel_size = 11  # octagon
+voxel_size = 10  # octagon
 # voxel_size = 7  # rover (test01)
 # voxel_size = 4  # rover (initial)
 
@@ -40,7 +40,7 @@ def preprocess_point_cloud(pcd, voxel_size):
         o3d.geometry.KDTreeSearchParamHybrid(radius=radius_feature, max_nn=100))
     return pcd_down, pcd_fpfh
 
-def prepare_dataset(voxel_size):
+def prepare_dataset(voxel_size, source, target):
     # print(":: Load two point clouds and disturb initial pose.")
 
     #Demo models (room & chair)
@@ -59,11 +59,13 @@ def prepare_dataset(voxel_size):
     # source = o3d.io.read_point_cloud("ReconstructedCenteredOctagon.pcd")
     # source = o3d.io.read_point_cloud("recon-source-phone-02.pcd")
 
-    source = o3d.io.read_point_cloud("closeup-scene-source-test03-hololens.pcd")
-    target = o3d.io.read_point_cloud("TargetOctagonRealPos01.pcd")
+    # source = o3d.io.read_point_cloud("closeup-scene-source-test03-hololens.pcd")
+    # target = o3d.io.read_point_cloud("TargetOctagonRealPos01.pcd")
 
     #displays the models without transformation/rotation
     # draw_registration_result(source, target, np.identity(4))
+    # initT = np.matrix('0 0 0 0; 0 0 0 0; 0 0 0 0; 0 0 0 0')
+    # draw_registration_result(source, target, initT)
 
     source_down, source_fpfh = preprocess_point_cloud(source, voxel_size)
     target_down, target_fpfh = preprocess_point_cloud(target, voxel_size)
