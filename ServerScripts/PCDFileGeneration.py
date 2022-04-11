@@ -1,15 +1,19 @@
 import numpy as np
 from scipy.spatial.transform import Rotation
 import open3d as o3d
-from PCDFileParser import *
-
-#temporary
-from ModelComparisonCoreFunctions import *
+import os
 
 print("Generating PCD File...")
 # Actual PCD Generation 
-pcd = o3d.io.read_point_cloud("scene_dense_mesh_refine.ply")
-o3d.io.write_point_cloud("OutputPointCloud.pcd", pcd, write_ascii=True)
+
+for file in os.listdir("./"):
+    if file.endswith(".ply"):
+        pcd = o3d.io.read_point_cloud(str(file))
+        o3d.io.write_point_cloud(str(file).split(".")[0] + ".pcd", pcd, write_ascii=True)
+
+# pcd = o3d.io.read_point_cloud("scene_dense_mesh_refine.ply")
+# o3d.io.write_point_cloud("OutputPointCloud.pcd", pcd, write_ascii=True)
+
 print("Generated PCD File Successfully.")
 
 # Transform the point cloud to the position in the real world

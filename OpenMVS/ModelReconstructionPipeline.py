@@ -124,10 +124,12 @@ PRESET = {'SEQUENTIAL': [0, 1, 2, 3, 4, 5, 11, 12, 13, 14, 15],
           'MVG_GLOBAL': [0, 1, 2, 3, 4, 6, 7, 8, 9, 11],
           'MVS': [12, 13, 14, 15],
           'MVS_SGM': [16, 17],
-          'MyOwnPipeline':[0,1,2,3,4,5,7,8,9,11,12,13,14,15,16,17]}
+          'MyOwnPipeline':[0,1,2,3,4,5,7,8,9,11,12,13,14,15,16,17],
+          'MyOwnPipeline2': [0, 1, 2, 3, 4, 5, 11, 12, 13, 14]
+          }
 
-# PRESET_DEFAULT = 'SEQUENTIAL'
-PRESET_DEFAULT = 'MyOwnPipeline'
+PRESET_DEFAULT = 'SEQUENTIAL'
+# PRESET_DEFAULT = 'MyOwnPipeline'
 
 # HELPERS for terminal colors
 BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE = range(8)

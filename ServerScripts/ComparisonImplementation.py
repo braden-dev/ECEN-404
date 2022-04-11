@@ -1,6 +1,6 @@
 from ModelComparisonCoreFunctions import *
 
-def nRANSAC_onceICP(sourcePCD, targetPCD):
+def nRANSAC_onceICP(sourcePCD, targetPCD, n, showDisplay):
     RANSACcorrespondanceSetSizeVec = []
     ICPcorrespondanceSetSizeVec = []
     # maxRCSS = 0
@@ -12,7 +12,8 @@ def nRANSAC_onceICP(sourcePCD, targetPCD):
     goodRuns = 0
 
     # Runs n times 
-    for i in range(10):
+    for i in range(n):
+    # for i in range(10): # <=== CHANGE BACK TO i=10 OR SOMETHING
         #step 1 - pre-processing
         source, target, source_down, target_down, source_fpfh, target_fpfh = prepare_dataset(voxel_size, sourcePCD, targetPCD)
 
@@ -48,7 +49,8 @@ def nRANSAC_onceICP(sourcePCD, targetPCD):
     # print(RANSACcorrespondanceSetSizeVec)
     # print(ICPcorrespondanceSetSizeVec)
     # print(num)
-    draw_registration_result(source, target, bestICP.transformation)
+    if(showDisplay == True):
+        draw_registration_result(source, target, bestICP.transformation)
 
     # count = 0
     # for i in ICPcorrespondanceSetSizeVec:
@@ -60,6 +62,7 @@ def nRANSAC_onceICP(sourcePCD, targetPCD):
     # print(bestICP.transformation)
 
     T = bestICP.transformation.copy() # the 4x4 matrix obtained
+    #print(T)
     rotation = T[:3, :3] # rotation of the point cloud as a 3x3 matrix
     # translation = T[:3, 3] # translation of the point cloud as a 3x1 matrix
 

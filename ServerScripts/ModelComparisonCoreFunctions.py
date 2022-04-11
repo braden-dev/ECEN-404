@@ -1,8 +1,8 @@
 from cv2 import threshold
+from matplotlib.pyplot import draw
 import open3d as o3d
 import numpy as np
 import copy
-import time
 from scipy.spatial.transform import Rotation
 
 voxel_size = 10  # octagon
@@ -67,6 +67,24 @@ def prepare_dataset(voxel_size, source, target):
     # initT = np.matrix('0 0 0 0; 0 0 0 0; 0 0 0 0; 0 0 0 0')
     # draw_registration_result(source, target, initT)
 
+    # vv TESTING INIT TRANSFORM vv #
+
+    # eulerAngleInitTransform = [-126,-4.92,0]
+    # initTransformMatrix = Rotation.from_euler('xyz', eulerAngleInitTransform, degrees=True).as_matrix()
+    # iTMArray = np.asmatrix(initTransformMatrix)
+    # #iTMArray = np.matrix('0 0 0 ; 0 0 0 ; 0 0 0')
+    # iTMArray = np.vstack([iTMArray,[0,0,0]])
+    # iTMArray = np.hstack([iTMArray,[[0],[0],[0],[1]]])
+    # # iTMArray = [[ 9.98223727e-01,  1.53457503e-03, -5.95569937e-02, 0], #-1.24349784e+02],
+    # #             [-4.45017673e-02, -6.45436421e-01, -7.62516504e-01, 0], #3.39931651e+01],
+    # #             [-3.96103916e-02,  7.63812458e-01, -6.44221659e-01, 0], #5.17655973e+02],
+    # #             [ 0.00000000e+00,  0.00000000e+00,  0.00000000e+00,  1.00000000e+00]]
+    # draw_registration_result(source, target, iTMArray)
+    # source.transform(iTMArray)
+
+    # ^^ TESTING INIT TRANSFORM ^^ #
+
+
     source_down, source_fpfh = preprocess_point_cloud(source, voxel_size)
     target_down, target_fpfh = preprocess_point_cloud(target, voxel_size)
     return source, target, source_down, target_down, source_fpfh, target_fpfh
@@ -119,3 +137,16 @@ def refine_registration(source, target, source_fpfh, target_fpfh, voxel_size, re
         source, target, distance_threshold, result_ransac.transformation,
         o3d.pipelines.registration.TransformationEstimationPointToPlane())
     return result
+
+# scaledSourcePCD = o3d.io.read_point_cloud("ScaledRover_90CCW_Cropped.pcd")
+# target = o3d.io.read_point_cloud("PreDefRover.pcd")
+# source_temp = copy.deepcopy(scaledSourcePCD)
+# # eulerAngleInitTransform = [-126,-4.92,0]
+# eulerAngleInitTransform = [129.69622076, 25.76793375, 11.84078905]
+# initTransformMatrix = Rotation.from_euler('xyz', eulerAngleInitTransform, degrees=True).as_matrix()
+# iTMArray = np.asarray(initTransformMatrix)
+# iTMArray = np.vstack([iTMArray,[0,0,0]])
+# iTMArray = np.hstack([iTMArray,[[0],[0],[0],[0]]])
+# # scaledTargetPCD.transform(iTMArray)
+# # t = np.matrix('0 0 0 0; 0 0 0 0; 0 0 0 0; 0 0 0 0')
+# draw_registration_result(scaledSourcePCD, target, iTMArray)
