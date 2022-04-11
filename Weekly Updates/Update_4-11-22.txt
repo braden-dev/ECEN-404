@@ -1,0 +1,9 @@
+Name: Braden DeVargas
+UIN: 127007068
+
+Updates:
+1) Spent a lot of time validating the reconstruction subsystem
+
+Next Steps:
+1) Continued validation of the reconstruction subsystem
+2) Detailed validation of the model comparison and cropping subsystems

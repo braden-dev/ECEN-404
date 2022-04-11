@@ -1,0 +1,9 @@
+Name: Braden DeVargas
+UIN: 127007068
+
+Updates:
+1) Finished implementing the hologram display algorith in Unity and tested it with different object orientations
+2) Spent some time validating the major pieces necessary for my thesis
+
+Next Steps:
+1) In depth validation of all parts of the system
